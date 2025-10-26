@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Voting System</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="login-section" id="loginSection">
+  <h2>Login to Vote</h2>
+  <input type="email" id="emailInput" placeholder="Enter your email" required />
+  <button onclick="login()">Login</button>
+  <p id="loginError" style="color: red;"></p>
+</div>
+
+<div class="main-container" id="votingArea" style="display: none;">
+  <!-- Your existing voting section goes here -->
+</div>
+
+  <div class="main-container">
+    <header>
+      <h1>Vote for Your Candidate</h1>
+      <p>Select your favorite candidate and view instant results below.</p>
+    </header>
+
+    <main class="voting-section">
+      <div class="candidate">
+        <img src="C:\Users\DELL\onlivo\images\bat.webp" alt="Batman" />
+        <h2>Batman</h2>
+        <button onclick="vote('A')">Vote for A</button>
+      </div>
+
+      <div class="candidate">
+        <img src="C:\Users\DELL\onlivo\images\spiderman-4k-newartwork-ko-3840x2400.jpg" alt="Spiderman" />
+        <h2>Spiderman</h2>
+        <button onclick="vote('B')">Vote for B</button>
+      </div>
+
+      <div class="candidate">
+        <img src="C:\Users\DELL\onlivo\images\wo,vie.webp" alt="Wolverine" />
+        <h2>Wolverine</h2>
+        <button onclick="vote('C')">Vote for C</button>
+      </div>
+    </main>
+
+    <section class="results-section">
+      <h2>Live Voting Results</h2>
+      <canvas id="resultsChart"></canvas>
+      <p>Total Votes: <span id="totalVotes">0</span></p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
